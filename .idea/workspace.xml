@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2a05097b-9e6a-4177-a65a-7a47a26a91e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/CustomerController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ItemController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/OrderController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/ItemModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/OrderModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/customerModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ItemModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ItemModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/praween-imalsha/pos.git",
-    "accountId": "b70fb7ee-3306-4e24-a1ba-647629ea5bbc"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;praween-imalsha&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/praween-imalsha/pos.git&quot;,
+    &quot;accountId&quot;: &quot;b70fb7ee-3306-4e24-a1ba-647629ea5bbc&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -37,17 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/pos-system",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/pos-system/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/pos-system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/pos-system/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\pos-system" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,6 +79,11 @@
       <updated>1729587700576</updated>
       <workItem from="1729587701642" duration="3000" />
       <workItem from="1730166669441" duration="300000" />
+      <workItem from="1730174163184" duration="4132000" />
+      <workItem from="1730178356930" duration="2237000" />
+      <workItem from="1730192697736" duration="5000" />
+      <workItem from="1730205151218" duration="8000" />
+      <workItem from="1730211231154" duration="3839000" />
     </task>
     <servers />
   </component>

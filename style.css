@@ -36,13 +36,14 @@ i{
 }
 #item-card{
     background-color: brown;
-    box-shadow: 3px 3px #00eeff;
+    box-shadow: rgb(0, 149, 255) 0px 1px 0px, rgb(0, 149, 255) 0px 8px 24px, rgb(0, 149, 255) 0px 16px 48px;
+
 }
 #order-card{
     background-color: #01233e;
-    box-shadow: 3px 3px #00eeff;
+    box-shadow: rgb(0, 149, 255) 0px 1px 0px, rgb(0, 149, 255) 0px 8px 24px, rgb(0, 149, 255) 0px 16px 48px;
 }
 #order-form{
     background-color: #023b67;
-    box-shadow: 3px 3px #00eeff;
+    box-shadow: rgb(0, 149, 255) 0px 1px 0px, rgb(0, 149, 255) 0px 8px 24px, rgb(0, 149, 255) 0px 16px 48px;
 }

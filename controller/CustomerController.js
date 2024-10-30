@@ -1,7 +1,6 @@
 // import {CustomerModel} from "./models/customerModel.js";
 import CustomerModel from "../models/customerModel.js";
 import {customer_array, item_array, order_array} from "../db/database.js";
-
 const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
@@ -68,20 +67,10 @@ $("#customer_add_btn").on("click", function() {
         Swal.fire({
             icon: "error",
             title: "Invalid Input",
-            text: "Invalid Address",
+            text: "Invalid address",
         });
+
     } else {
-
-
-        // let customer = {
-        //     id: customer_array.length + 1,
-        //     first_name: first_name,
-        //     last_name: last_name,
-        //     mobile: mobile,
-        //     email: email,
-        //     address: address
-        // };
-
         let customer = new CustomerModel(
             customer_array.length + 1,
             first_name,
@@ -141,14 +130,7 @@ $('#customer_update_btn').on('click', function () {
     let email = $('#email').val();
     let address = $('#address').val();
 
-    // let customer = {
-    //     id: customer_array[index].id,
-    //     first_name: first_name,
-    //     last_name: last_name,
-    //     mobile: mobile,
-    //     email: email,
-    //     address: address
-    // };
+
 
     let customer = new CustomerModel(
         customer_array[index].id,
