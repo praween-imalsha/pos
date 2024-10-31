@@ -218,9 +218,12 @@
             </div>
             <div class="mb-3">
               <!-- <label for="customer" class="form-label">Customer ID:</label>-->
-              <label for="customer1" class="form-label">Customer Id</label>
-              <select class="form-select" id="customer1">
-                <option value="C003" selected></option>
+              <label for="customerSelect" class="form-label">Select Customer</label>
+              <select class="form-select" id="customerSelect" required>
+                <option selected disabled value="">Choose a customer</option>
+                <option value="Customer 1">Customer 1</option>
+                <option value="Customer 2">Customer 2</option>
+                <option value="Customer 3">Customer 3</option>
               </select>
             </div>
             <div class="mb-3">
@@ -369,7 +372,98 @@
   });
 
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const orderTableBody = document.getElementById("OrderTable");
+    const customerSelect = document.getElementById("customer1");
+    const itemSelect = document.getElementById("item");
+    const totalField = document.querySelector(".total-box strong");
+    const subTotalField = document.querySelector(".total-box .text-danger");
 
+    let orderTotal = 0;
+    let subTotal = 0;
+
+    // Sample customer and item data for demonstration
+    const customers = {
+      C003: { name: "John Doe", address: "1234 Elm St" }
+    };
+
+    const items = {
+      P002: { name: "Item 2", price: 50, qtyOnHand: 100 }
+    };
+
+    // Populate customer details based on selection
+    customerSelect.addEventListener("change", () => {
+      const selectedCustomer = customerSelect.value;
+      if (selectedCustomer && customers[selectedCustomer]) {
+        document.getElementById("name1").value = customers[selectedCustomer].name;
+        document.getElementById("address1").value = customers[selectedCustomer].address;
+      }
+    });
+
+    // Populate item details based on selection
+    itemSelect.addEventListener("change", () => {
+      const selectedItem = itemSelect.value;
+      if (selectedItem && items[selectedItem]) {
+        document.getElementById("itemName1").value = items[selectedItem].name;
+        document.getElementById("price1").value = items[selectedItem].price;
+        document.getElementById("qty1").value = items[selectedItem].qtyOnHand;
+      }
+    });
+
+    // Add item to order
+    document.querySelector(".btn-success").addEventListener("click", () => {
+      const itemId = itemSelect.value;
+      const itemName = document.getElementById("itemName1").value;
+      const price = parseFloat(document.getElementById("price1").value);
+      const orderQty = parseInt(document.getElementById("orderQty").value);
+      const qtyOnHand = parseInt(document.getElementById("qty1").value);
+
+
+      // Calculate total for this item and update qtyOnHand
+      const itemTotal = price * orderQty;
+      items[itemId].qtyOnHand -= orderQty;
+
+      // Add row to the table
+      const row = document.createElement("tr");
+      row.innerHTML = ` <td>${itemId}</td>
+      <td>${itemName}</td>
+      <td>${price.toFixed(2)}</td>
+      <td>${orderQty}</td>
+      <td>${itemTotal.toFixed(2)}</td>
+    `;
+      orderTableBody.appendChild(row);
+
+      // Update totals
+      orderTotal += itemTotal;
+      subTotal += itemTotal;
+      totalField.textContent = `${orderTotal.toFixed(2)} Rs`;
+      subTotalField.textContent = `SubTotal: ${subTotal.toFixed(2)} Rs`;
+
+      // Reset fields
+      document.getElementById("orderQty").value = "";
+    });
+
+    // Handle Purchase action
+    document.getElementById("PurchaseItem").addEventListener("click", () => {
+      const cash = parseFloat(document.getElementById("cash").value);
+
+
+
+      const balance = cash - orderTotal;
+      alert(`Purchase successful! Change due: ${balance.toFixed(2)} Rs`);
+
+      // Reset for new order
+      orderTableBody.innerHTML = "";
+      orderTotal = 0;
+      subTotal = 0;
+      totalField.textContent = "0.00 Rs";
+      subTotalField.textContent = "SubTotal: 0.00 Rs";
+      document.getElementById("cash").value = "";
+    });
+  });
+
+</script>
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/ItemController.js"></script>
 </body>
